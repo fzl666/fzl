@@ -1,3 +1,5 @@
+//Programmed by LuwenxiSong from @fzlmagazine
+//Scripted by LuwenxiSong and BenitaGuo from @fzlmagazine
 let input;
 let img;
 let title
