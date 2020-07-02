@@ -20,7 +20,7 @@ function setup() {
   换一个 = createButton('取名');
   换一个.position(10, 458);
   换一个.mousePressed(changeName)
-  fzl = createButton('fzlmagazine')
+  fzl = createButton('@fzlmagazine')
   fzl.position(360,460)
   fzl.mousePressed(socialMedia)
  // saveThis = createButton('保存')
