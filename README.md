@@ -1,2 +1,2 @@
-Programmed by LuwenxiSong, scripted by LuwenxiSong & BenitaGuo from @fzlmagazine
+Programmed by LuwenxiSong, scripted by LuwenxiSong & BenitaGuo for @fzlmagazine
 
