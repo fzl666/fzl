@@ -11,17 +11,33 @@ let el2 = ['小丑', '仿生', '纳米', '原子', '丧', '电子', '十字架',
 let el3 = ['天使', '精灵', '女孩', '男孩', '宝贝', '小妈咪', '虫', '菇', '公主', '少女', '少年', '1号机', '子', '恐龙', '蜈蚣', '蟑螂', '食人鱼', '小飞船', '舞女', '桃子', '团子', '精', '酱', '废料', '生物', '物质', '奶茶', '搅拌机', '液', '火锅', '祭司', '体', '实验品', '试验体', '小猫咪', '样本', '颗粒', '血块', '汽水', '蛙', '软体', '机器人', '人质', '小熊', '圣母', '胶囊', '乙女', '主义者', '屑', '垢', '污渍', '废人', '毛血旺', '怪人', '肉', '河豚', '豚', '藻类', '唾沫', '咒语', '建筑', '球', '小狗', '碳', '元素', '少先队员', '博士', '糖']
 let name
 
+
 function preload() {
   title = loadImage('title.png')
 }
-
 function setup() {
-  createCanvas(windowWidth, windowHeight)
+  createCanvas(900, 900)
+  const div = document.createElement("div")
+  div.id='btn' 
+
+
   input = createFileInput(handleFile);
-  start = createButton('取名');
-  start.mousePressed(nameGenerator)
-  fzl = createButton('ABOUT')
-  fzl.mousePressed(socialMedia)
+  let f = document.getElementsByTagName("input")[0]
+  f.id='newImg'
+
+
+  const start = document.createElement("button")
+  start.innerHTML='取名'
+  start.onclick=nameGenerator;
+
+  const fzl = document.createElement("button")
+  fzl.innerHTML='关于'
+  fzl.onclick=socialMedia; 
+  document.body.appendChild(div)
+  div.appendChild(start)
+  div.appendChild(f)
+  div.appendChild(fzl)
+
   name=getItem('name')
   noLoop()
 }
@@ -29,67 +45,54 @@ function setup() {
 function draw() {
   fill(225);
   noStroke()
-  rect(0,0,windowWidth,windowHeight)
+  rect(0,0,900,9000)
   imageMode(CENTER)
-  image(title, windowWidth/2, windowHeight/16, windowWidth/1.3, windowHeight/10.4)
+  image(title, 450, 100, 700, 200)
   textSize(10);
-  start.position(windowWidth*0.01, windowHeight*0.96);
-  input.position(windowWidth/5, windowHeight*0.96)
-  fzl.position(windowWidth*0.70, windowHeight*0.96)
   if (img) {
-    image(img, windowWidth*0.44, windowHeight*0.44, windowWidth*0.56, windowHeight*0.56)
-    changeName()
+    image(img, 555, 480, 490, 490)
+    nameGenerator()
   }
   fill(105,105,105)
-  textSize(20)
+  textSize(40)
   textStyle(BOLD)
   noStroke()
-  text('您的亚名是', 10, windowHeight/2)
+  text('您的亚名是', 20, 450)
   textSize(18)
   textStyle(NORMAL)
   fill('#999AB8')
 }
 
 function handleFile(file) {
- 
-  print(file);
+  print('ping')
+  print(file.type);
+  print(file)
   if (file.type === 'image') {
-    img = createImg(file.data, '');
-    img.hide()
+    img = createImg(file.data,'');
+    img.hide() 
   } else {
     img = null;
   }
 }
 
-function nameGenerator() {
+function nameGenerator() { 
   let one = random(el1)
   let two = random(el2)
   let three = random(el3)
   let name = one+two+three
   storeItem('name',name)
   changeName()
-  // textSize(40)
-  // textStyle(BOLD)
-  // strokeWeight(4);
-  // stroke('white');
-  // fill(random(color))
-  // text(name, x, windowHeight/1.6) 
 }
 
 function changeName() {
   redraw()
-  textSize(40)
+  textSize(60)
   textStyle(BOLD)
   strokeWeight(4);
   stroke('white');
   fill(random(color))
-  text(getItem('name'), 10, windowHeight/1.6)
+  text(getItem('name'), 20, 620)
 }
 function socialMedia() {
   window.location.href ='./contact/index.html'
-                       }
-
-
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);   
-  }
+}
