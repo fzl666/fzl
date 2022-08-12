@@ -94,5 +94,5 @@ function changeName() {
   text(getItem('name'), 20, 620)
 }
 function socialMedia() {
-  window.location.href ='./contact/index.html'
+    alert("编程：LuwenxiSong, 文案：LuwenxiSong & BenitaGuo \n @fzlmagazine");
 }
