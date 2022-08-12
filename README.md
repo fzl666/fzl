@@ -4,6 +4,6 @@ By Luwenxi & Benita from FZLLAB
 
 [取名机网址](https://fzllab.com/names)
 
-[Backup](https://fzl666.github.io/fzl/subculturenames/)
+[Github Page(latest version)](https://fzl666.github.io/fzl/)
 
 [fzllab网址](https://fzllab.com)
