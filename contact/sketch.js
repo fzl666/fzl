@@ -1,12 +1,12 @@
 let ig
 let wb
 function setup() {
+createCanvas(windowWidth, windowHeight)
 noLoop()
   
 }
 
 function draw() {
- createCanvas(400,400)
  background(250)
  text('@fzlmagazine',150,200)
  ig = createButton('Instagram')
@@ -15,6 +15,10 @@ function draw() {
  wb = createButton('Weibo')
  wb.position(160,300)
  wb.mousePressed(weibo)
+ back = createButton('返回')
+ back.position(163,340)
+ back.mousePressed(go)
+ text('程序设计：LuwenxiSong, 词库编写：LuwenxiSong & BenitaGuo', 20, 48)
 }
 
 function instagram(){
@@ -24,3 +28,9 @@ function instagram(){
 function weibo(){
   window.open("https://www.weibo.com/u/7464383065")
 }
+function go(){
+  window.location.href ="../index.html"
+}
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);   
+  }
