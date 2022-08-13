@@ -1,18 +1,24 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 body {
-  margin: 0;
+  padding: 0;
+  width: 100%;
   display: flex; 
   justify-content: center; 
   align-items: center;
 }
 #btn{
+  border:none;
   position: absolute;
   text-align: center;
   top:860px;
   display: flex;
-  width:860px;
+  width:850px;
   justify-content: space-between;
+}
+button{
+  border-style: outset; 
 }

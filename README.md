@@ -1,9 +1,7 @@
 ## 高科技亚文化取名机
 
-By Luwenxi & Benita from FZLLAB
+By Luwenxi & Benita for FZLLAB
 
-[取名机网址](https://fzllab.com/names)
+[Latest Version](https://fzl666.github.io/fzl/)
 
-[Github Page(latest version)](https://fzl666.github.io/fzl/)
-
-[fzllab网址](https://fzllab.com)
+[fzllab](https://fzllab.com)
